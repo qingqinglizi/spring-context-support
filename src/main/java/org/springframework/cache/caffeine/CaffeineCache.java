@@ -1,29 +1,70 @@
+/*
+ * Copyright 2002-2016 the original author or authors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package org.springframework.cache.caffeine;
 
-import com.github.benmanes.caffeine.cache.Cache;
-import com.github.benmanes.caffeine.cache.LoadingCache;
 import java.util.concurrent.Callable;
 import java.util.function.Function;
-import org.springframework.cache.Cache.ValueRetrievalException;
-import org.springframework.cache.Cache.ValueWrapper;
+
+import com.github.benmanes.caffeine.cache.LoadingCache;
+
 import org.springframework.cache.support.AbstractValueAdaptingCache;
 import org.springframework.lang.UsesJava8;
 import org.springframework.util.Assert;
 
+/**
+ * Spring {@link org.springframework.cache.Cache} adapter implementation
+ * on top of a Caffeine {@link com.github.benmanes.caffeine.cache.Cache} instance.
+ *
+ * <p>Requires Caffeine 2.1 or higher.
+ *
+ * @author Ben Manes
+ * @author Juergen Hoeller
+ * @author Stephane Nicoll
+ * @since 4.3
+ */
 @UsesJava8
-public class CaffeineCache
-        extends AbstractValueAdaptingCache
-{
-    private final String name;
-    private final Cache<Object, Object> cache;
+public class CaffeineCache extends AbstractValueAdaptingCache {
 
-    public CaffeineCache(String name, Cache<Object, Object> cache)
-    {
+    private final String name;
+
+    private final com.github.benmanes.caffeine.cache.Cache<Object, Object> cache;
+
+
+    /**
+     * Create a {@link CaffeineCache} instance with the specified name and the
+     * given internal {@link com.github.benmanes.caffeine.cache.Cache} to use.
+     * @param name the name of the cache
+     * @param cache the backing Caffeine Cache instance
+     */
+    public CaffeineCache(String name, com.github.benmanes.caffeine.cache.Cache<Object, Object> cache) {
         this(name, cache, true);
     }
 
-    public CaffeineCache(String name, Cache<Object, Object> cache, boolean allowNullValues)
-    {
+    /**
+     * Create a {@link CaffeineCache} instance with the specified name and the
+     * given internal {@link com.github.benmanes.caffeine.cache.Cache} to use.
+     * @param name the name of the cache
+     * @param cache the backing Caffeine Cache instance
+     * @param allowNullValues whether to accept and convert {@code null}
+     * values for this cache
+     */
+    public CaffeineCache(String name, com.github.benmanes.caffeine.cache.Cache<Object, Object> cache,
+                         boolean allowNullValues) {
+
         super(allowNullValues);
         Assert.notNull(name, "Name must not be null");
         Assert.notNull(cache, "Cache must not be null");
@@ -31,96 +72,95 @@ public class CaffeineCache
         this.cache = cache;
     }
 
-    public final String getName()
-    {
+
+    @Override
+    public final String getName() {
         return this.name;
     }
 
-    public final Cache<Object, Object> getNativeCache()
-    {
+    @Override
+    public final com.github.benmanes.caffeine.cache.Cache<Object, Object> getNativeCache() {
         return this.cache;
     }
 
-    public Cache.ValueWrapper get(Object key)
-    {
-        if ((this.cache instanceof LoadingCache))
-        {
-            Object value = ((LoadingCache)this.cache).get(key);
+    @Override
+    public ValueWrapper get(Object key) {
+        if (this.cache instanceof LoadingCache) {
+            Object value = ((LoadingCache<Object, Object>) this.cache).get(key);
             return toValueWrapper(value);
         }
         return super.get(key);
     }
 
-    public <T> T get(Object key, Callable<T> valueLoader)
-    {
-        return fromStoreValue(this.cache.get(key, new LoadFunction(valueLoader)));
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> T get(Object key, final Callable<T> valueLoader) {
+        return (T) fromStoreValue(this.cache.get(key, new LoadFunction(valueLoader)));
     }
 
-    protected Object lookup(Object key)
-    {
+    @Override
+    protected Object lookup(Object key) {
         return this.cache.getIfPresent(key);
     }
 
-    public void put(Object key, Object value)
-    {
+    @Override
+    public void put(Object key, Object value) {
         this.cache.put(key, toStoreValue(value));
     }
 
-    public Cache.ValueWrapper putIfAbsent(Object key, Object value)
-    {
+    @Override
+    public ValueWrapper putIfAbsent(Object key, final Object value) {
         PutIfAbsentFunction callable = new PutIfAbsentFunction(value);
         Object result = this.cache.get(key, callable);
-        return callable.called ? null : toValueWrapper(result);
+        return (callable.called ? null : toValueWrapper(result));
     }
 
-    public void evict(Object key)
-    {
+    @Override
+    public void evict(Object key) {
         this.cache.invalidate(key);
     }
 
-    public void clear()
-    {
+    @Override
+    public void clear() {
         this.cache.invalidateAll();
     }
 
-    private class PutIfAbsentFunction
-            implements Function<Object, Object>
-    {
+
+    private class PutIfAbsentFunction implements Function<Object, Object> {
+
         private final Object value;
+
         private boolean called;
 
-        public PutIfAbsentFunction(Object value)
-        {
+        public PutIfAbsentFunction(Object value) {
             this.value = value;
         }
 
-        public Object apply(Object key)
-        {
+        @Override
+        public Object apply(Object key) {
             this.called = true;
-            return CaffeineCache.this.toStoreValue(this.value);
+            return toStoreValue(this.value);
         }
     }
 
-    private class LoadFunction
-            implements Function<Object, Object>
-    {
+
+    private class LoadFunction implements Function<Object, Object> {
+
         private final Callable<?> valueLoader;
 
-        public LoadFunction()
-        {
+        public LoadFunction(Callable<?> valueLoader) {
             this.valueLoader = valueLoader;
         }
 
-        public Object apply(Object o)
-        {
-            try
-            {
-                return CaffeineCache.this.toStoreValue(this.valueLoader.call());
+        @Override
+        public Object apply(Object o) {
+            try {
+                return toStoreValue(valueLoader.call());
             }
-            catch (Exception ex)
-            {
-                throw new Cache.ValueRetrievalException(o, this.valueLoader, ex);
+            catch (Exception ex) {
+                throw new ValueRetrievalException(o, valueLoader, ex);
             }
         }
     }
+
 }

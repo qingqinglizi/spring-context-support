@@ -1,3 +1,19 @@
+/*
+ * Copyright 2002-2017 the original author or authors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package org.springframework.cache.jcache.interceptor;
 
 import java.lang.annotation.Annotation;
@@ -6,71 +22,85 @@ import java.util.Arrays;
 import java.util.Set;
 import javax.cache.annotation.CacheInvocationContext;
 import javax.cache.annotation.CacheInvocationParameter;
+
 import org.springframework.cache.interceptor.CacheOperationInvocationContext;
 
+/**
+ * The default {@link CacheOperationInvocationContext} implementation used
+ * by all interceptors. Also implements {@link CacheInvocationContext} to
+ * act as a proper bridge when calling JSR-107 {@link javax.cache.annotation.CacheResolver}
+ *
+ * @author Stephane Nicoll
+ * @since 4.1
+ */
 class DefaultCacheInvocationContext<A extends Annotation>
-        implements CacheInvocationContext<A>, CacheOperationInvocationContext<JCacheOperation<A>>
-{
+        implements CacheInvocationContext<A>, CacheOperationInvocationContext<JCacheOperation<A>> {
+
     private final JCacheOperation<A> operation;
+
     private final Object target;
+
     private final Object[] args;
+
     private final CacheInvocationParameter[] allParameters;
 
-    public DefaultCacheInvocationContext(JCacheOperation<A> operation, Object target, Object[] args)
-    {
+
+    public DefaultCacheInvocationContext(JCacheOperation<A> operation, Object target, Object[] args) {
         this.operation = operation;
         this.target = target;
         this.args = args;
         this.allParameters = operation.getAllParameters(args);
     }
 
-    public JCacheOperation<A> getOperation()
-    {
+
+    @Override
+    public JCacheOperation<A> getOperation() {
         return this.operation;
     }
 
-    public Method getMethod()
-    {
+    @Override
+    public Method getMethod() {
         return this.operation.getMethod();
     }
 
-    public Object[] getArgs()
-    {
-        return (Object[])this.args.clone();
+    @Override
+    public Object[] getArgs() {
+        return this.args.clone();
     }
 
-    public Set<Annotation> getAnnotations()
-    {
+    @Override
+    public Set<Annotation> getAnnotations() {
         return this.operation.getAnnotations();
     }
 
-    public A getCacheAnnotation()
-    {
+    @Override
+    public A getCacheAnnotation() {
         return this.operation.getCacheAnnotation();
     }
 
-    public String getCacheName()
-    {
+    @Override
+    public String getCacheName() {
         return this.operation.getCacheName();
     }
 
-    public Object getTarget()
-    {
+    @Override
+    public Object getTarget() {
         return this.target;
     }
 
-    public CacheInvocationParameter[] getAllParameters()
-    {
-        return (CacheInvocationParameter[])this.allParameters.clone();
+    @Override
+    public CacheInvocationParameter[] getAllParameters() {
+        return this.allParameters.clone();
     }
 
-    public <T> T unwrap(Class<T> cls)
-    {
+    @Override
+    public <T> T unwrap(Class<T> cls) {
         throw new IllegalArgumentException("Cannot unwrap to " + cls);
     }
 
-    public String toString()
-    {
+
+    @Override
+    public String toString() {
         StringBuilder sb = new StringBuilder("CacheInvocationContext{");
         sb.append("operation=").append(this.operation);
         sb.append(", target=").append(this.target);
@@ -79,4 +109,5 @@ class DefaultCacheInvocationContext<A extends Annotation>
         sb.append('}');
         return sb.toString();
     }
+
 }

@@ -1,27 +1,76 @@
+/*
+ * Copyright 2002-2018 the original author or authors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package org.springframework.mail;
 
 import java.io.Serializable;
 import java.util.Date;
+
 import org.springframework.util.Assert;
 import org.springframework.util.ObjectUtils;
 import org.springframework.util.StringUtils;
 
-public class SimpleMailMessage
-        implements MailMessage, Serializable
-{
+/**
+ * Models a simple mail message, including data such as the from, to, cc, subject,
+ * and text fields.
+ *
+ * <p>Consider {@code JavaMailSender} and JavaMail {@code MimeMessages} for creating
+ * more sophisticated messages, for example messages with attachments, special
+ * character encodings, or personal names that accompany mail addresses.
+ *
+ * @author Dmitriy Kopylenko
+ * @author Juergen Hoeller
+ * @since 10.09.2003
+ * @see MailSender
+ * @see org.springframework.mail.javamail.JavaMailSender
+ * @see org.springframework.mail.javamail.MimeMessagePreparator
+ * @see org.springframework.mail.javamail.MimeMessageHelper
+ * @see org.springframework.mail.javamail.MimeMailMessage
+ */
+@SuppressWarnings("serial")
+public class SimpleMailMessage implements MailMessage, Serializable {
+
     private String from;
+
     private String replyTo;
+
     private String[] to;
+
     private String[] cc;
+
     private String[] bcc;
+
     private Date sentDate;
+
     private String subject;
+
     private String text;
 
-    public SimpleMailMessage() {}
 
-    public SimpleMailMessage(SimpleMailMessage original)
-    {
+    /**
+     * Create a new {@code SimpleMailMessage}.
+     */
+    public SimpleMailMessage() {
+    }
+
+    /**
+     * Copy constructor for creating a new {@code SimpleMailMessage} from the state
+     * of an existing {@code SimpleMailMessage} instance.
+     */
+    public SimpleMailMessage(SimpleMailMessage original) {
         Assert.notNull(original, "'original' message argument must not be null");
         this.from = original.getFrom();
         this.replyTo = original.getReplyTo();
@@ -33,103 +82,100 @@ public class SimpleMailMessage
         this.text = original.getText();
     }
 
-    public void setFrom(String from)
-    {
+
+    @Override
+    public void setFrom(String from) {
         this.from = from;
     }
 
-    public String getFrom()
-    {
+    public String getFrom() {
         return this.from;
     }
 
-    public void setReplyTo(String replyTo)
-    {
+    @Override
+    public void setReplyTo(String replyTo) {
         this.replyTo = replyTo;
     }
 
-    public String getReplyTo()
-    {
+    public String getReplyTo() {
         return this.replyTo;
     }
 
-    public void setTo(String to)
-    {
-        this.to = new String[] { to };
+    @Override
+    public void setTo(String to) {
+        this.to = new String[] {to};
     }
 
-    public void setTo(String[] to)
-    {
+    @Override
+    public void setTo(String[] to) {
         this.to = to;
     }
 
-    public String[] getTo()
-    {
+    public String[] getTo() {
         return this.to;
     }
 
-    public void setCc(String cc)
-    {
-        this.cc = new String[] { cc };
+    @Override
+    public void setCc(String cc) {
+        this.cc = new String[] {cc};
     }
 
-    public void setCc(String[] cc)
-    {
+    @Override
+    public void setCc(String[] cc) {
         this.cc = cc;
     }
 
-    public String[] getCc()
-    {
+    public String[] getCc() {
         return this.cc;
     }
 
-    public void setBcc(String bcc)
-    {
-        this.bcc = new String[] { bcc };
+    @Override
+    public void setBcc(String bcc) {
+        this.bcc = new String[] {bcc};
     }
 
-    public void setBcc(String[] bcc)
-    {
+    @Override
+    public void setBcc(String[] bcc) {
         this.bcc = bcc;
     }
 
-    public String[] getBcc()
-    {
+    public String[] getBcc() {
         return this.bcc;
     }
 
-    public void setSentDate(Date sentDate)
-    {
+    @Override
+    public void setSentDate(Date sentDate) {
         this.sentDate = sentDate;
     }
 
-    public Date getSentDate()
-    {
+    public Date getSentDate() {
         return this.sentDate;
     }
 
-    public void setSubject(String subject)
-    {
+    @Override
+    public void setSubject(String subject) {
         this.subject = subject;
     }
 
-    public String getSubject()
-    {
+    public String getSubject() {
         return this.subject;
     }
 
-    public void setText(String text)
-    {
+    @Override
+    public void setText(String text) {
         this.text = text;
     }
 
-    public String getText()
-    {
+    public String getText() {
         return this.text;
     }
 
-    public void copyTo(MailMessage target)
-    {
+
+    /**
+     * Copy the contents of this message to the given target message.
+     * @param target the {@code MailMessage} to copy to
+     */
+    public void copyTo(MailMessage target) {
         Assert.notNull(target, "'target' MailMessage must not be null");
         if (getFrom() != null) {
             target.setFrom(getFrom());
@@ -157,27 +203,28 @@ public class SimpleMailMessage
         }
     }
 
-    public boolean equals(Object other)
-    {
+
+    @Override
+    public boolean equals(Object other) {
         if (this == other) {
             return true;
         }
         if (!(other instanceof SimpleMailMessage)) {
             return false;
         }
-        SimpleMailMessage otherMessage = (SimpleMailMessage)other;
-        return (ObjectUtils.nullSafeEquals(this.from, otherMessage.from)) &&
-                (ObjectUtils.nullSafeEquals(this.replyTo, otherMessage.replyTo)) &&
-                (ObjectUtils.nullSafeEquals(this.to, otherMessage.to)) &&
-                (ObjectUtils.nullSafeEquals(this.cc, otherMessage.cc)) &&
-                (ObjectUtils.nullSafeEquals(this.bcc, otherMessage.bcc)) &&
-                (ObjectUtils.nullSafeEquals(this.sentDate, otherMessage.sentDate)) &&
-                (ObjectUtils.nullSafeEquals(this.subject, otherMessage.subject)) &&
-                (ObjectUtils.nullSafeEquals(this.text, otherMessage.text));
+        SimpleMailMessage otherMessage = (SimpleMailMessage) other;
+        return (ObjectUtils.nullSafeEquals(this.from, otherMessage.from) &&
+                ObjectUtils.nullSafeEquals(this.replyTo, otherMessage.replyTo) &&
+                ObjectUtils.nullSafeEquals(this.to, otherMessage.to) &&
+                ObjectUtils.nullSafeEquals(this.cc, otherMessage.cc) &&
+                ObjectUtils.nullSafeEquals(this.bcc, otherMessage.bcc) &&
+                ObjectUtils.nullSafeEquals(this.sentDate, otherMessage.sentDate) &&
+                ObjectUtils.nullSafeEquals(this.subject, otherMessage.subject) &&
+                ObjectUtils.nullSafeEquals(this.text, otherMessage.text));
     }
 
-    public int hashCode()
-    {
+    @Override
+    public int hashCode() {
         int hashCode = ObjectUtils.nullSafeHashCode(this.from);
         hashCode = 29 * hashCode + ObjectUtils.nullSafeHashCode(this.replyTo);
         hashCode = 29 * hashCode + ObjectUtils.nullSafeHashCode(this.to);
@@ -188,8 +235,8 @@ public class SimpleMailMessage
         return hashCode;
     }
 
-    public String toString()
-    {
+    @Override
+    public String toString() {
         StringBuilder sb = new StringBuilder("SimpleMailMessage: ");
         sb.append("from=").append(this.from).append("; ");
         sb.append("replyTo=").append(this.replyTo).append("; ");
@@ -202,18 +249,18 @@ public class SimpleMailMessage
         return sb.toString();
     }
 
-    private static String[] copyOrNull(String[] state)
-    {
+
+    private static String[] copyOrNull(String[] state) {
         if (state == null) {
             return null;
         }
         return copy(state);
     }
 
-    private static String[] copy(String[] state)
-    {
+    private static String[] copy(String[] state) {
         String[] copy = new String[state.length];
         System.arraycopy(state, 0, copy, 0, state.length);
         return copy;
     }
+
 }
