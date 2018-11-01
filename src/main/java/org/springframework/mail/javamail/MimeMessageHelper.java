@@ -765,7 +765,7 @@ public class MimeMessageHelper {
      * @throws MessagingException in case of errors
      */
     public void setText(String text) throws MessagingException {
-        setText(text, false);
+        setText(text, true);
     }
 
     /**

@@ -2,107 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c236bb4b-08ab-49d4-9243-3491e81e0a2c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_0_8_RELEASE.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/spring-context-support.iml" afterPath="$PROJECT_DIR$/.idea/spring-context-support.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_11.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_java6_2_3_13.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_velocity_velocity_1_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_quartz_scheduler_quartz_2_3_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_0_8_RELEASE.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-context-support.iml" afterPath="$PROJECT_DIR$/spring-context-support.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/caffeine/CaffeineCache.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/caffeine/CaffeineCache.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/caffeine/CaffeineCacheManager.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/caffeine/CaffeineCacheManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/ehcache/EhCacheCache.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/ehcache/EhCacheCache.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/ehcache/EhCacheCacheManager.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/ehcache/EhCacheCacheManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/ehcache/EhCacheFactoryBean.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/ehcache/EhCacheFactoryBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/ehcache/EhCacheManagerFactoryBean.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/ehcache/EhCacheManagerFactoryBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/ehcache/EhCacheManagerUtils.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/ehcache/EhCacheManagerUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/guava/GuavaCache.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/guava/GuavaCache.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/guava/GuavaCacheManager.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/guava/GuavaCacheManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/JCacheCache.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/JCacheCache.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/JCacheCacheManager.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/JCacheCacheManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/JCacheManagerFactoryBean.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/JCacheManagerFactoryBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/config/AbstractJCacheConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/config/AbstractJCacheConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/config/JCacheConfigurer.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/config/JCacheConfigurer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/config/JCacheConfigurerSupport.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/config/JCacheConfigurerSupport.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/config/ProxyJCacheConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/config/ProxyJCacheConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/AbstractCacheInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/AbstractCacheInterceptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/AbstractFallbackJCacheOperationSource.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/AbstractFallbackJCacheOperationSource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/AbstractJCacheKeyOperation.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/AbstractJCacheKeyOperation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/AbstractJCacheOperation.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/AbstractJCacheOperation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/AbstractKeyCacheInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/AbstractKeyCacheInterceptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/AnnotationJCacheOperationSource.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/AnnotationJCacheOperationSource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/BeanFactoryJCacheOperationSourceAdvisor.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/BeanFactoryJCacheOperationSourceAdvisor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/CachePutInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/CachePutInterceptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/CachePutOperation.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/CachePutOperation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/CacheRemoveAllInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/CacheRemoveAllInterceptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/CacheRemoveAllOperation.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/CacheRemoveAllOperation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/CacheRemoveEntryInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/CacheRemoveEntryInterceptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/CacheRemoveOperation.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/CacheRemoveOperation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/CacheResolverAdapter.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/CacheResolverAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/CacheResultInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/CacheResultInterceptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/CacheResultOperation.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/CacheResultOperation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/DefaultCacheInvocationContext.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/DefaultCacheInvocationContext.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/DefaultCacheKeyInvocationContext.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/DefaultCacheKeyInvocationContext.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/DefaultCacheMethodDetails.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/DefaultCacheMethodDetails.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/DefaultJCacheOperationSource.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/DefaultJCacheOperationSource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/JCacheAspectSupport.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/JCacheAspectSupport.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/JCacheInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/JCacheInterceptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/JCacheOperation.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/JCacheOperation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/JCacheOperationSource.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/JCacheOperationSource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/JCacheOperationSourcePointcut.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/JCacheOperationSourcePointcut.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/KeyGeneratorAdapter.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/KeyGeneratorAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/SimpleExceptionCacheResolver.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/jcache/interceptor/SimpleExceptionCacheResolver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/transaction/AbstractTransactionSupportingCacheManager.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/transaction/AbstractTransactionSupportingCacheManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/transaction/TransactionAwareCacheDecorator.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/transaction/TransactionAwareCacheDecorator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/cache/transaction/TransactionAwareCacheManagerProxy.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/cache/transaction/TransactionAwareCacheManagerProxy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/mail/MailAuthenticationException.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/mail/MailAuthenticationException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/mail/MailException.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/mail/MailException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/mail/MailMessage.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/mail/MailMessage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/mail/MailParseException.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/mail/MailParseException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/mail/MailPreparationException.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/mail/MailPreparationException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/mail/MailSendException.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/mail/MailSendException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/mail/MailSender.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/mail/MailSender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/mail/SimpleMailMessage.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/mail/SimpleMailMessage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/mail/javamail/ConfigurableMimeFileTypeMap.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/mail/javamail/ConfigurableMimeFileTypeMap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/mail/javamail/InternetAddressEditor.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/mail/javamail/InternetAddressEditor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/mail/javamail/JavaMailSender.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/mail/javamail/JavaMailSender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/mail/javamail/JavaMailSenderImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/mail/javamail/JavaMailSenderImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/mail/javamail/MimeMailMessage.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/mail/javamail/MimeMailMessage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/mail/javamail/MimeMessageHelper.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/mail/javamail/MimeMessageHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/mail/javamail/MimeMessagePreparator.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/mail/javamail/MimeMessagePreparator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/mail/javamail/SmartMimeMessage.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/mail/javamail/SmartMimeMessage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/commonj/DelegatingTimerListener.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/commonj/DelegatingTimerListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/commonj/DelegatingWork.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/commonj/DelegatingWork.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/commonj/ScheduledTimerListener.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/commonj/ScheduledTimerListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/commonj/TimerManagerAccessor.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/commonj/TimerManagerAccessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/commonj/TimerManagerFactoryBean.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/commonj/TimerManagerFactoryBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/commonj/TimerManagerTaskScheduler.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/commonj/TimerManagerTaskScheduler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/commonj/WorkManagerTaskExecutor.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/commonj/WorkManagerTaskExecutor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/AdaptableJobFactory.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/AdaptableJobFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/CronTriggerFactoryBean.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/CronTriggerFactoryBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/DelegatingJob.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/DelegatingJob.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/JobDetailFactoryBean.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/JobDetailFactoryBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/JobMethodInvocationFailedException.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/JobMethodInvocationFailedException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/LocalDataSourceJobStore.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/LocalDataSourceJobStore.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/LocalTaskExecutorThreadPool.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/LocalTaskExecutorThreadPool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/MethodInvokingJobDetailFactoryBean.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/MethodInvokingJobDetailFactoryBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/QuartzJobBean.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/QuartzJobBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/ResourceLoaderClassLoadHelper.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/ResourceLoaderClassLoadHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/SchedulerAccessor.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/SchedulerAccessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/SchedulerAccessorBean.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/SchedulerAccessorBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/SchedulerContextAware.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/SchedulerContextAware.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/SchedulerFactoryBean.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/SchedulerFactoryBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/SimpleThreadPoolTaskExecutor.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/SimpleThreadPoolTaskExecutor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/SimpleTriggerFactoryBean.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/SimpleTriggerFactoryBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/SpringBeanJobFactory.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/SpringBeanJobFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/ui/freemarker/FreeMarkerConfigurationFactory.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/ui/freemarker/FreeMarkerConfigurationFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/ui/freemarker/FreeMarkerConfigurationFactoryBean.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/ui/freemarker/FreeMarkerConfigurationFactoryBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/ui/freemarker/FreeMarkerTemplateUtils.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/ui/freemarker/FreeMarkerTemplateUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/ui/freemarker/SpringTemplateLoader.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/ui/freemarker/SpringTemplateLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/ui/jasperreports/JasperReportsUtils.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/ui/jasperreports/JasperReportsUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/ui/velocity/SpringResourceLoader.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/ui/velocity/SpringResourceLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/ui/velocity/VelocityEngineFactory.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/ui/velocity/VelocityEngineFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/ui/velocity/VelocityEngineFactoryBean.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/ui/velocity/VelocityEngineFactoryBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/springframework/ui/velocity/VelocityEngineUtils.java" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/ui/velocity/VelocityEngineUtils.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -114,18 +23,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SpringBeanJobFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/springframework/scheduling/quartz/SpringBeanJobFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="18" column="7" lean-forward="false" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="FreeMarkerConfigurationFactory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/springframework/ui/freemarker/FreeMarkerConfigurationFactory.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -172,12 +69,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JasperReportsUtils.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JasperReportsUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/springframework/ui/jasperreports/JasperReportsUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
+            <state relative-caret-position="-480">
               <caret line="23" column="21" lean-forward="false" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MimeMessageHelper.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/springframework/mail/javamail/MimeMessageHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="438">
+              <caret line="767" column="26" lean-forward="false" selection-start-line="767" selection-start-column="26" selection-end-line="767" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -246,7 +155,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/springframework/cache/transaction/TransactionAwareCacheManagerProxy.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/springframework/mail/javamail/ConfigurableMimeFileTypeMap.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/springframework/mail/javamail/InternetAddressEditor.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/springframework/mail/javamail/JavaMailSender.java" />
@@ -297,6 +205,7 @@
         <option value="$PROJECT_DIR$/src/main/java/org/springframework/ui/velocity/VelocityEngineUtils.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/springframework/cache/ehcache/EhCacheCache.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/springframework/mail/javamail/MimeMessageHelper.java" />
       </list>
     </option>
   </component>
@@ -689,7 +598,7 @@
       <option name="presentableId" value="Default" />
       <updated>1541053476295</updated>
       <workItem from="1541053477868" duration="11000" />
-      <workItem from="1541053545178" duration="8552000" />
+      <workItem from="1541053545178" duration="9571000" />
     </task>
     <task id="LOCAL-00001" summary="html邮件">
       <created>1541055814947</created>
@@ -705,11 +614,18 @@
       <option name="project" value="LOCAL" />
       <updated>1541056540223</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="格式调整">
+      <created>1541063300592</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1541063300592</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8563000" />
+    <option name="totallyTimeSpent" value="9582000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -753,7 +669,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="html邮件" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="格式调整" />
+    <option name="LAST_COMMIT_MESSAGE" value="格式调整" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -828,16 +745,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/org/springframework/mail/javamail/MimeMailMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
-          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/springframework/mail/javamail/MimeMessageHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-832">
           <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1217,9 +1124,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/springframework/ui/jasperreports/JasperReportsUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
+        <state relative-caret-position="-480">
           <caret line="23" column="21" lean-forward="false" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/springframework/mail/javamail/MimeMessageHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="767" column="26" lean-forward="false" selection-start-line="767" selection-start-column="26" selection-end-line="767" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
