@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-context-support</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <!--<scm>-->
+        <!--<connection>scm:git:ssh://git@code.bonc.com.cn:10022/COPNET/cas-server-support-pm-jdbc-encode.git</connection>-->
+        <!--<developerConnection>scm:git:ssh://git@code.bonc.com.cn:10022/COPNET/cas-server-support-pm-jdbc-encode.git</developerConnection>-->
+        <!--<url>https://code.bonc.com.cn/COPNET/cas-server-support-pm-jdbc-encode.git</url>-->
+    <!--</scm>-->
+
+    <distributionManagement>
+        <repository>
+            <id>bonc-releases</id>
+            <name>bonc-releases</name>
+            <url>https://code.bonc.com.cn/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>bonc-snapshots</id>
+            <name>bonc-snapshots</name>
+            <url>https://code.bonc.com.cn/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.github.ben-manes.caffeine</groupId>
+            <artifactId>caffeine</artifactId>
+            <version>2.6.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.0.8.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>25.0-jre</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>5.0.8.RELEASE</version>
+        </dependency>
+    </dependencies>
+</project>
