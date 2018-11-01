@@ -8,11 +8,11 @@
     <artifactId>spring-context-support</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
-    <!--<scm>-->
-        <!--<connection>scm:git:ssh://git@code.bonc.com.cn:10022/COPNET/cas-server-support-pm-jdbc-encode.git</connection>-->
-        <!--<developerConnection>scm:git:ssh://git@code.bonc.com.cn:10022/COPNET/cas-server-support-pm-jdbc-encode.git</developerConnection>-->
-        <!--<url>https://code.bonc.com.cn/COPNET/cas-server-support-pm-jdbc-encode.git</url>-->
-    <!--</scm>-->
+    <scm>
+        <connection>scm:git:ssh://git@github.com:qingqinglizi/spring-context-support.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:qingqinglizi/spring-context-support.git</developerConnection>
+        <url>https://github.com/qingqinglizi/spring-context-support.git</url>
+    </scm>
 
     <distributionManagement>
         <repository>

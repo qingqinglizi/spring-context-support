@@ -481,7 +481,7 @@ public class MimeMessageHelper
     public void setText(String text)
             throws MessagingException
     {
-        setText(text, false);
+        setText(text, true);
     }
 
     public void setText(String text, boolean html)
